@@ -119,7 +119,7 @@ function validar() {
         alert("El año de nacimietno es muy largo");
         return false;
     } else {
-        if (dianacimiento <= diaaplicacion && mesnacimiento <= mesaplicacion && yearnacimiento <= yearaplicacion) {
+        if (dianacimiento <= diaaplicacion || mesnacimiento <= mesaplicacion || yearnacimiento <= yearaplicacion) {
             var diafinal = diaaplicacion - dianacimiento;
             var mesfinal = mesaplicacion - mesnacimiento;
             var yearfinal = yearaplicacion - yearnacimiento;
@@ -131,19 +131,7 @@ function validar() {
             console.log(mesfinal);
             console.log(yearfinal);
             alert("Edad en meses es: " + yearfinal);
-        } else if (dianacimiento > diaaplicacion) {
-            var diafinal = diaaplicacion + 30 - dianacimiento;
-            console.log(diafinal);
-            var mesfinal = mesaplicacion - mesnacimiento - 1;
-            console.log(mesfinal);
-            var yearfinal = yearaplicacion - yearnacimiento;
-            console.log(yearfinal);
-
-            var yearfinal = yearfinal * 12;
-            var yearfinal = yearfinal + mesfinal;
-            alert("Edad en meses es1: " + yearfinal);
-        } else {
-            alert("hola mundo!!");
+            //return false;
         }
     }
 
